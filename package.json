@@ -6,8 +6,7 @@
     "build": "npm run auto && NODE_ENV=production webpack && node ./server/copy.js",
     "dev": "npm run auto && webpack-dev-server",
     "lint": "prettier --write './{src,bin,server}/**/*.js'",
-    "auto": "node ./server/files.js && npm run lint",
-    "create": "node ./bin/index.js"
+    "auto": "node ./server/files.js && npm run lint"
   },
   "dependencies": {
     "fs-extra": "^8.1.0",
