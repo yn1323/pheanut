@@ -1,6 +1,6 @@
 {
   "name": "pheanut",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Phina.js Framework",
   "scripts": {
     "build": "npm run auto && NODE_ENV=production webpack && node ./server/copy.js",
