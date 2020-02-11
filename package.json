@@ -2,19 +2,19 @@
   "name": "pheanut",
   "version": "0.0.1",
   "description": "Phina.js Framework",
-  "main": "index.js",
   "scripts": {
     "build": "npm run auto && NODE_ENV=production webpack && node ./server/copy.js",
     "dev": "npm run auto && webpack-dev-server",
     "lint": "prettier --write './{src,server}/**/*.js'",
-    "auto": "node ./server/files.js && npm run lint"
+    "auto": "node ./server/files.js && npm run lint",
+    "create": "node ./bin/index.js"
   },
   "dependencies": {
+    "fs-extra": "^8.1.0",
     "phina.js": "git://github.com/phinajs/phina.js.git#develop"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "fs-extra": "^8.1.0",
     "prettier": "^1.19.1",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
