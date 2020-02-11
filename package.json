@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run auto && NODE_ENV=production webpack && node ./server/copy.js",
     "dev": "npm run auto && webpack-dev-server",
-    "lint": "prettier --write './{src,server}/**/*.js'",
+    "lint": "prettier --write './{src,bin,server}/**/*.js'",
     "auto": "node ./server/files.js && npm run lint",
     "create": "node ./bin/index.js"
   },
