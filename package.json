@@ -4,7 +4,7 @@
   "description": "Phina.js Framework",
   "scripts": {
     "build": "npm run auto && NODE_ENV=production webpack && node ./server/copy.js",
-    "dev": "npm run auto && webpack-dev-server",
+    "dev": "npm run auto && webpack-dev-server --host 0.0.0.0",
     "lint": "prettier --write './{src,bin,server}/**/*.js'",
     "auto": "node ./server/files.js && npm run lint"
   },
