@@ -21,6 +21,11 @@ FILES.forEach(f => {
   })
 })
 
+// git ignoreの追加
+fs.copy(`${pheanutDir}/ignore`, `${packageDir}/.gitignore`, () => {
+  console.log('Created [.gitignore]')
+})
+
 // Scriptの追加
 fs.readFile(`${pheanutDir}/package.json`, (e, data) => {
   if (e) throw e
