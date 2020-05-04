@@ -34,9 +34,9 @@
    npm install --save-dev pheanut
    ```
 1. Pheanutの中身を展開
-  ```bash
-  node ./node_modules/pheanut/bin
-  ```
+   ```bash
+   node ./node_modules/pheanut/bin
+   ```
 
 ## 便利コマンド
 ```bash
@@ -59,10 +59,6 @@ npm run build
 # lint
 npm run lint
 ```
-
-## 課題
-- asset/scenesの自動ファイル作成がhot reload時には行われない
-
 
 ## Author
 ynatani
