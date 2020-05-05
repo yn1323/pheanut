@@ -2,6 +2,7 @@
 import store from '../store'
 // デバッグ用モジュール
 import debug from '../scripts/debug'
+import common from '../scripts/common'
 
 export default {
   superClass: 'DisplayScene',
@@ -12,5 +13,10 @@ export default {
     this.backgroundColor = colors.random()
     // デバッグ処理(stateのdebugに依存)
     debug.run(this)
+    // 画像表示
+    common
+      .scaleSprite('note.png')
+      .addChildTo(this)
+      .setPosition(this.gridX.center(0), this.gridY.center(0))
   }
 }
