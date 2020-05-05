@@ -5,6 +5,10 @@ import store from '../store'
 
 export default {
   screen: () => {
+    // モバイル以外は画面サイズ最大
+    if (!store.layout.isMobile) {
+      return store.layout
+    }
     // 幅に対する比率
     const RATIO = 1.77
     const WIDTH =
@@ -42,8 +46,8 @@ export default {
     // グリッド点
     let pointGroup = DisplayElement().addChildTo(scene)
 
-    ;(17).times(function(spanX) {
-      ;(17).times(function(spanY) {
+    ;(17).times(spanX => {
+      ;(17).times(spanY => {
         let point = CircleShape({
           radius: 2,
           fill: COLOR

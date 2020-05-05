@@ -12,16 +12,11 @@ phina.globalize()
 scenes.forEach(f => {
   import('./scenes/' + f.label).then(p => phina.define(f.label, p.default))
 })
-
-// モバイル画面
-const isMobile = true
-
 // ゲーム初期設定
 const CONFIG = {
   startLabel: 'scene1', // 起動画面
   assets: assets, // 素材一覧
-  height: isMobile ? common.screen.height : 200, // 高さ
-  width: isMobile ? common.screen.width : 500, // 幅
+  ...common.screen(), // 画面サイズ
   scenes: scenes // シーン一覧
 }
 // Phina.jsの起動

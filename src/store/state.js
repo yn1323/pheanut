@@ -1,8 +1,14 @@
 export default {
   name: 'pheanut',
-  // デバッグ関連
+  // レイアウト
+  layout: {
+    isMobile: true,
+    width: window.innerWidth, // モバイル出ない場合の幅
+    height: window.innerHeight // モバイル出ない場合の高さ
+  },
+  // デバッグ
   debug: {
     isDebug: true, // デバッグ
-    gridColor: '#aaa', // デバッグ用グリッドの色
+    gridColor: '#aaa' // デバッグ用グリッドの色
   }
 }

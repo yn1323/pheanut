@@ -6,7 +6,9 @@ import common from './common'
 
 export default {
   run: scene => {
-    if(!store.debug.isDebug){return false};
+    if (!store.debug.isDebug) {
+      return false
+    }
     // デバッググリッドの表示
     common.debugGrid(scene)
   }
