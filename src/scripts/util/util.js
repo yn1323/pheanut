@@ -21,8 +21,7 @@ const common = {
   grid: () => {
     let size = common.screen()
     return {width: size.width / 16, height: size.height / 16}
-  },
-
+  }
 }
 
 export default common

@@ -3,8 +3,8 @@ export default {
   // レイアウト
   layout: {
     isMobile: true,
-    width: window.innerWidth, // モバイル出ない場合の幅
-    height: window.innerHeight // モバイル出ない場合の高さ
+    width: window.innerWidth, // モバイルでない場合の幅
+    height: window.innerHeight // モバイルでない場合の高さ
   },
   // デバッグ
   debug: {

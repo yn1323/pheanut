@@ -1,15 +1,15 @@
 import store from '../../store'
 
 phina.define('Debug', {
-  init: function (scene) {
-    if(!store.debug) return false;
-    this.scene = scene;
-    this.debugGrid();
+  init: function(scene) {
+    if (!store.debug) return false
+    this.scene = scene
+    this.debugGrid()
   },
   // デバッグ用グリッド表示
   debugGrid: function() {
     const COLOR = store.debug.gridColor
-    let scene = this.scene;
+    let scene = this.scene
     let gx = scene.gridX
     let gy = scene.gridY
     // 横線
@@ -33,15 +33,15 @@ phina.define('Debug', {
     // グリッド点
     let pointGroup = DisplayElement().addChildTo(scene)
 
-      ; (17).times(spanX => {
-        ; (17).times(spanY => {
-          let point = CircleShape({
-            radius: 2,
-            fill: COLOR
-          })
-            .addChildTo(pointGroup)
-            .setPosition(gx.span(spanX), gy.span(spanY))
+    ;(17).times(spanX => {
+      ;(17).times(spanY => {
+        let point = CircleShape({
+          radius: 2,
+          fill: COLOR
         })
+          .addChildTo(pointGroup)
+          .setPosition(gx.span(spanX), gy.span(spanY))
       })
+    })
   }
 })

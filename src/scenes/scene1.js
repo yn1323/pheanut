@@ -13,7 +13,7 @@ export default {
     let colors = ['red', 'blue', 'yellow', 'green']
     this.backgroundColor = colors.random()
     // デバッグ処理(stateのdebugに依存)
-    Debug(this);
+    Debug(this)
     // 画像表示
     Sprite('note.png')
       .scaleSprite({x: 6})
