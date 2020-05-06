@@ -44,6 +44,7 @@ fs.readFile(`${pheanutDir}/package.json`, (e, data) => {
 // パッケージのインストール
 const PACKAGES = [
   {type: '--save', lib: 'git://github.com/phinajs/phina.js.git#develop'},
+  {type: '--save', lib: '@fortawesome/fontawesome'},
   {type: '--save-dev', lib: 'eslint'},
   {type: '--save-dev', lib: 'fs-extra'},
   {type: '--save-dev', lib: 'prettier'},

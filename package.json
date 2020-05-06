@@ -9,6 +9,7 @@
     "auto": "node ./server/files.js && npm run lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "fs-extra": "^8.1.0",
     "phina.js": "git://github.com/phinajs/phina.js.git#develop"
   },

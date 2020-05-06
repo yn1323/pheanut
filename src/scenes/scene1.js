@@ -19,5 +19,13 @@ export default {
       .scaleSprite({x: 6})
       .addChildTo(this)
       .setPosition(this.gridX.center(0), this.gridY.center(0))
+
+    // Font Awesomeを表示
+    Label({
+      text: String.fromCharCode('0xf17b'),
+      fontFamily: 'FontAwesome_brands'
+    })
+      .addChildTo(this)
+      .setPosition(this.gridX.center(-5), this.gridY.center(3))
   }
 }

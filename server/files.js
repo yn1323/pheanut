@@ -10,9 +10,19 @@ const create = () => {
   const REG_FILE_NAME = /(.*)(?:\.([^.]+$))/
 
   // asset作成
+  // assets以下のファイルの取得
+  let assetFiles = util.getFilesRec(ASSETS_DIR)
+  // font-awesomeのwoffファイルを追加
+  assetFiles.font.FontAwesome_solid =
+    './node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2'
+  assetFiles.font.FontAwesome_brands =
+    './node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2'
+  assetFiles.font.FontAwesome_regular =
+    './node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2'
+
   fs.writeFile(
     `${root}/src/auto/assets.js`,
-    `export default ${JSON.stringify(util.getFilesRec(ASSETS_DIR))}`,
+    `export default ${JSON.stringify(assetFiles)}`,
     e => (e ? console.log(e) : '')
   )
 
