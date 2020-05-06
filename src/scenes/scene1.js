@@ -11,11 +11,11 @@ export default {
   init: function(option) {
     this.superInit(option)
     let colors = ['red', 'blue', 'yellow', 'green']
-    this.backgroundColor = colors.random()
+    this.backgroundColor = '#ccc'
     // デバッグ処理(stateのdebugに依存)
     Debug(this)
     // 画像表示
-    Sprite('note.png')
+    Sprite('note')
       .scaleSprite({x: 6})
       .addChildTo(this)
       .setPosition(this.gridX.center(0), this.gridY.center(0))
@@ -27,5 +27,19 @@ export default {
     })
       .addChildTo(this)
       .setPosition(this.gridX.center(-5), this.gridY.center(3))
+
+    // ドット文字の表示
+    Label({
+      text: 'ドット フォント',
+      fontFamily: 'DragonQuestFC'
+    })
+      .addChildTo(this)
+      .setPosition(this.gridX.center(5), this.gridY.center(-5))
+
+    Label({
+      text: 'ふつうのフォント'
+    })
+      .addChildTo(this)
+      .setPosition(this.gridX.center(3), this.gridY.center(-6))
   }
 }
