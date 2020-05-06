@@ -15,7 +15,21 @@ const util = {
           ? `${dir.replace(root, '')}/${file.name}`
           : util.getFilesRec(`${dir}/${file.name}`)
         return obj
-      }, {})
+      }, {}),
+  delExtFromKey: obj => {
+    Object.keys(obj).forEach(key => {
+      if (key.includes('.')) {
+        // 拡張しなしをキーに追加
+        obj[key.split('.')[0]] = obj[key]
+        // もとのキーを削除
+        delete obj[key]
+      } else {
+        util.delExtFromKey(obj[key])
+      }
+    })
+    console.log(obj)
+    return obj
+  }
 }
 
 module.exports = util
