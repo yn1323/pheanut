@@ -20,4 +20,3 @@ const CONFIG = {
 }
 // Phina.jsの起動
 phina.main(() => GameApp(CONFIG).run())
-console.log(phina)
