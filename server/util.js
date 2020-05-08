@@ -27,7 +27,6 @@ const util = {
         util.delExtFromKey(obj[key])
       }
     })
-    console.log(obj)
     return obj
   }
 }

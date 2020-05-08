@@ -21,6 +21,7 @@ export default {
       .setPosition(this.gridX.center(0), this.gridY.center(0))
 
     // Font Awesomeを表示
+    // server/config.jsで設定を変更する必要あり
     Label({
       text: String.fromCharCode('0xf17b'),
       fontFamily: 'FontAwesome_brands'
@@ -29,9 +30,10 @@ export default {
       .setPosition(this.gridX.center(-5), this.gridY.center(3))
 
     // ドット文字の表示
+    // server/config.jsで設定を変更する必要あり
     Label({
       text: 'ドット フォント',
-      fontFamily: 'DragonQuestFC'
+      fontFamily: 'dotfont'
     })
       .addChildTo(this)
       .setPosition(this.gridX.center(5), this.gridY.center(-5))
