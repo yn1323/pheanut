@@ -12,7 +12,7 @@ const FILES = [
   '/server',
   '/.eslintrc.js',
   '/.gitignore.js',
-  '/.prettierrc',
+  '/.prettierrc.js',
   '/webpack.config.js',
   '/.vscode',
 ]
