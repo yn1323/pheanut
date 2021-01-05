@@ -8,9 +8,10 @@ import 'phina.js'
 phina.globalize()
 
 // シーンクラスのインスタンス化
-scenes.forEach((f) => {
-  import('./scenes/' + f.label).then((p) => phina.define(f.label, p.default))
+scenes.forEach(f => {
+  import('./scenes/' + f.label).then(p => phina.define(f.label, p.default))
 })
+
 // ゲーム初期設定
 const CONFIG = {
   startLabel: 'scene1', // 起動画面
