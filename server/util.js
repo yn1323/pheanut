@@ -12,7 +12,7 @@ const util = {
       .filter((dirent) => !dirent.name.startsWith('.'))
       .reduce((obj, file) => {
         obj[file.name] = file.isFile()
-          ? `${dir.replace(root, '')}/${file.name}`
+          ? `.${dir.replace(root, '')}/${file.name}`
           : util.getFilesRec(`${dir}/${file.name}`)
         return obj
       }, {}),
