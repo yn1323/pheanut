@@ -14,6 +14,7 @@ const FILES = [
   '/.gitignore.js',
   '/.prettierrc',
   '/webpack.config.js',
+  '/.vscode',
 ]
 FILES.forEach(f => {
   fs.copy(`${pheanutDir}${f}`, `${packageDir}${f}`, () => {
