@@ -1,3 +1,3 @@
 export default {
-  name: val => `setter + ${val}`
+  name: (val) => `setter + ${val}`,
 }

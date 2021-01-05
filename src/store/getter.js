@@ -1,3 +1,3 @@
 export default {
-  name: val => `getter + ${val}`
+  name: (val) => `getter + ${val}`,
 }
