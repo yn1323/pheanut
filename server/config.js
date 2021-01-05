@@ -1,4 +1,4 @@
 module.exports = {
-  useDotFont: true, // ドット絵フォント
-  useIconFont: true, // アイコンフォント
+  useDotFont: false, // ドット絵フォント
+  useIconFont: false, // アイコンフォント
 }
