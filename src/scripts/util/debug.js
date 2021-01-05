@@ -33,8 +33,8 @@ phina.define('Debug', {
     // グリッド点
     let pointGroup = DisplayElement().addChildTo(scene)
 
-    ;(17).times((spanX) => {
-      ;(17).times((spanY) => {
+    ;(17).times(spanX => {
+      ;(17).times(spanY => {
         let point = CircleShape({
           radius: 2,
           fill: COLOR,

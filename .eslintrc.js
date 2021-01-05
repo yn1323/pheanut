@@ -1,16 +1,22 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 140,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "bracketSpacing": true,
+        "arrowParens": "always"
+      }
+    ]
   },
-  plugins: ['prettier'],
-  extends: 'eslint:recommended',
-  parserOptions: {
-    ecmaVersion: 2019,
-    sourceType: 'module'
-  },
-  rules: {
-    eqeqeq: 'warn',
-    quotes: ['warn', 'single']
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2015
   }
 }

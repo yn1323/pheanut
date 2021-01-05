@@ -41,13 +41,13 @@ const create = () => {
     },
   ]
   if (config.useDotFont) {
-    DOT_FONTS.forEach((font) => useFonts.push(font))
+    DOT_FONTS.forEach(font => useFonts.push(font))
   }
   if (config.useIconFont) {
-    ICON_FONTS.forEach((font) => useFonts.push(font))
+    ICON_FONTS.forEach(font => useFonts.push(font))
   }
   // font-awesomeのwoffファイルを追加
-  useFonts.forEach((f) => {
+  useFonts.forEach(f => {
     try {
       fse.copySync(f.from, f.to)
     } catch (err) {
@@ -64,18 +64,18 @@ const create = () => {
   fs.writeFile(
     `${root}/src/auto/assets.js`,
     `export default ${JSON.stringify(assetFiles)}`,
-    (e) => (e ? console.log(e) : '')
+    e => (e ? console.log(e) : '')
   )
 
   // scene.js作成
-  let scenes = Object.keys(util.getFilesRec(SCENE_DIR)).map((f) => {
+  let scenes = Object.keys(util.getFilesRec(SCENE_DIR)).map(f => {
     let fName = f.match(REG_FILE_NAME)[1]
-    return {label: fName, className: fName}
+    return { label: fName, className: fName }
   })
   fs.writeFile(
     `${root}/src/auto/scenes.js`,
     `export default ${JSON.stringify(scenes)}`,
-    (e) => (e ? console.log(e) : '')
+    e => (e ? console.log(e) : '')
   )
 }
 // For npm script
