@@ -8,7 +8,7 @@ import '../extend'
 export default {
   superClass: 'DisplayScene',
   // GameApp.runのオプション(画面サイズなど)を引き継ぐ
-  init: function(option) {
+  init: function (option) {
     this.superInit(option)
     let colors = ['red', 'blue', 'yellow', 'green']
     this.backgroundColor = '#ccc'
@@ -24,7 +24,7 @@ export default {
     // server/config.jsで設定を変更する必要あり
     Label({
       text: String.fromCharCode('0xf17b'),
-      fontFamily: 'FontAwesome_brands'
+      fontFamily: 'FontAwesome_brands',
     })
       .addChildTo(this)
       .setPosition(this.gridX.center(-5), this.gridY.center(3))
@@ -33,15 +33,15 @@ export default {
     // server/config.jsで設定を変更する必要あり
     Label({
       text: 'ドット フォント',
-      fontFamily: 'dotfont'
+      fontFamily: 'dotfont',
     })
       .addChildTo(this)
       .setPosition(this.gridX.center(5), this.gridY.center(-5))
 
     Label({
-      text: 'ふつうのフォント'
+      text: 'ふつうのフォント',
     })
       .addChildTo(this)
       .setPosition(this.gridX.center(3), this.gridY.center(-6))
-  }
+  },
 }

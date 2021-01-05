@@ -11,7 +11,8 @@ module.exports = {
     chunkFilename: './chunks/chunks[id].js'
   },
   devServer: {
-    contentBase: __dirname
+    contentBase: __dirname,
+    open: true,
   },
   devtool: prod ? false : 'source-map'
 }

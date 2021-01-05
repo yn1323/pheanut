@@ -37,7 +37,10 @@
    ```bash
    node ./node_modules/pheanut/bin
    ```
-
+1. packageのinstall
+   ```bash
+   node run install
+   ```
 ## 便利コマンド
 ```bash
 # assets/scenesのファイルを作成

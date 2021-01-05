@@ -9,7 +9,7 @@ let store = new Proxy(state, {
   set(target, prop, val) {
     if (setter[prop]) val = setter[prop](val)
     return (target[prop] = val)
-  }
+  },
 })
 
 export default store
