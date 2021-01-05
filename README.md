@@ -1,7 +1,7 @@
 # Pheanut
 
 ## 概要
-国産2Dゲームライブラリ [Phina.js](https://phinajs.com/)を少しだけ使いやすくするツールライブラリ
+国産2Dゲームライブラリ [Phina.js](https://phinajs.com/)を少しだけ使いやすくするツール
 
 ### 機能
 - フォルダ構成を作成
@@ -13,7 +13,6 @@
 ## 必要な環境
 - Node.js
 - npm(最新のNode.jsがあれば不要)
-
 
 ## はじめかた(最初に1回だけ実行)
 
@@ -41,6 +40,20 @@
    ```bash
    node run install
    ```
+
+## 始め方
+1. 始め方
+   ```bash
+   node run start
+   ```
+
+## 機能
+### フォント
+1. ドットフォントの使用
+   - server/config.js useDotFont -> true
+1. AwesomeFontの使用
+   - server/config.js useIconFont -> true
+
 ## 便利コマンド
 ```bash
 # assets/scenesのファイルを作成
@@ -50,7 +63,7 @@ npm run auto
 
 ```bash
 # hot reload
-npm run dev
+npm run start
 ```
 
 ```bash
