@@ -16,7 +16,7 @@ export default {
     Debug(this)
     // 画像表示
     Sprite('note')
-      .scaleSprite({x: 6})
+      .scaleSprite({ x: 6 })
       .addChildTo(this)
       .setPosition(this.gridX.center(0), this.gridY.center(0))
 

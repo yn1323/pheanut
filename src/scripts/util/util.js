@@ -15,12 +15,12 @@ const common = {
     const WIDTH =
       window.innerHeight > window.innerWidth ? window.innerWidth : 500
     const HEIGHT = WIDTH * RATIO
-    return {width: WIDTH, height: HEIGHT}
+    return { width: WIDTH, height: HEIGHT }
   },
   // グリッド1つ分のサイズ取得
   grid: () => {
     let size = common.screen()
-    return {width: size.width / 16, height: size.height / 16}
+    return { width: size.width / 16, height: size.height / 16 }
   },
 }
 
