@@ -14,6 +14,12 @@ export default {
     this.backgroundColor = '#ccc'
     // デバッグ処理(stateのdebugに依存)
     Debug(this)
+
+    // store sample
+    console.log(store.name)
+    store.name = 123
+    console.log(store.name)
+
     // 画像表示
     Sprite('note')
       .scaleSprite({ x: 6 })
